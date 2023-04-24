@@ -1,0 +1,27 @@
+package com.ust.rest.repository;
+
+import java.util.ArrayList;
+
+import com.ust.rest.resource.Product;
+
+public class ProductRepository {
+	
+	private ArrayList<Product> productCache = new Arraylist<>();
+	public ProductRepository()
+	{
+		Product p1 = new Product();
+		p1.setProductId(101);
+		p1.setName("Laptop");
+		p1.setDescription("Macbook Retina Eye");
+		p1.setPrice(new BigDecimal 100000);
+		p1.setQty(5);
+		
+		Product p2 = new Product();
+		p1.setProductId(102);
+		p1.setName("Phone");
+		p1.setDescription("Galaxy m51");
+		p1.setPrice(new BigDecimal 90000);
+		p1.setQty(5);
+	}
+
+}

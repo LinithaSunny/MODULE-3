@@ -1,0 +1,44 @@
+package com.ust.ioc2;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+
+import com.ust.ioc.Login;
+
+public class TestDrawing {
+
+	public static void main(String[] args) {
+		
+//		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("beans.xml"));
+//		
+//		
+//		Object obj4 = factory.getBean("line");
+//		Line line = (Line)obj4;
+//		line.drawline();
+		
+		
+		//ClassPathXmlApplicationContext
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		boolean exists = context.containsBean("line");
+		System.out.println(exists);
+		if(exists)
+		{
+			Object object  = context.getBean("line");
+			
+			if(object instanceof Line)
+			{
+				Line line = (Line)object;
+				line.drawline();
+			}
+		}
+		
+		boolean type = context.isSingleton("line");
+		System.out.println(type);
+		
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.ust.rest;
+
+public class SwaggerConfig {
+	public Docket docket()
+
+
+{
+	private AppInfo metaData()
+	{
+		return new ApiInfoBuilder().title("UST - SpringBoot Swagger Config").
+				description("\"Swagger configuration for Application\"").
+				version("1.1.0").
+				license("Apache 2.0").licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"").
+				contact(new Contact("UST","https://youtube.com","contact@ust.com")).
+				build();
+	}
+}
+}
